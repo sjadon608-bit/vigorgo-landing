@@ -97,6 +97,24 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "VigorGo Electric Bike — CAD Design Preview",
+  "description": "CAD design animation of the upcoming VigorGo electric bike, showcasing its ~85% metal construction.",
+  "thumbnailUrl": "https://vigorgo.in/assets/vigorgo-cad-poster.jpg",
+  "uploadDate": "2026-05-20",
+  "contentUrl": "https://vigorgo.in/assets/vigorgo-cad.mp4",
+  "duration": "PT49S",
+  "publisher": {
+    "@type": "Organization",
+    "name": "VigorGo",
+    "logo": { "@type": "ImageObject", "url": "https://vigorgo.in/assets/logo-full.png" }
+  }
+}
+</script>
+
 <style>
   :root{
     --void:#0a0b0d;
@@ -104,7 +122,7 @@
     --panel-2:#1b1e22;
     --steel:#7d8085;
     --steel-dim:#4a4d52;
-    --signal:#F5F200;
+    --signal:#F6D300;
     --signal-bright:#FCE94A;
     --signal-deep:#C9AD00;
     --paper:#f2efe8;
@@ -236,6 +254,28 @@
     margin-bottom:8px; position:relative;
   }
   svg.bike{ width:100%; height:auto; display:block; position:relative; }
+  .bike-video{
+    width:100%; height:auto; display:block; position:relative; border-radius:2px;
+    background:#000;
+  }
+  .callout-overlay{ position:absolute; inset:0; pointer-events:none; }
+  .co{
+    position:absolute; display:flex; align-items:center; gap:8px;
+    font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--paper);
+    background:rgba(10,11,13,0.55); backdrop-filter:blur(2px);
+    padding:6px 10px; border:1px solid var(--line); border-radius:20px;
+  }
+  .co-dot{ width:6px; height:6px; border-radius:50%; background:var(--signal-bright); box-shadow:0 0 6px var(--signal-bright); flex-shrink:0; }
+  .co-text b{ color:var(--signal-bright); font-weight:700; }
+  .co-1{ top:14%; left:5%; }
+  .co-2{ bottom:12%; left:6%; }
+  .co-3{ bottom:12%; right:5%; }
+  @media (max-width:640px){
+    .co{ font-size:9.5px; padding:5px 8px; }
+    .co-1{ top:8%; left:3%; }
+    .co-2{ bottom:8%; left:3%; }
+    .co-3{ bottom:8%; right:3%; }
+  }
   .frame-line{ stroke:var(--paper-dim); stroke-width:2.4; fill:none; }
   .metal-highlight{ stroke:var(--signal-bright); stroke-width:2.6; fill:none; stroke-dasharray:6 5; }
   .wheel-outer{ fill:none; stroke:var(--paper-dim); stroke-width:3; }
@@ -384,9 +424,8 @@
     .sticky-cta{ right:14px; bottom:14px; }
     .sticky-cta a span.long{ display:none; }
   }
-</style>
 
-  <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ9F7PM01B"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -396,6 +435,7 @@
   gtag('config', 'G-TZ9F7PM01B');
 </script>
   
+</style>
 </head>
 <body>
 
@@ -426,35 +466,17 @@
 
     <div class="blueprint-wrap">
       <div class="blueprint-panel">
-        <div class="bp-label"><span>Fig. 01 — Construction Schematic</span><span>~85% Metal</span></div>
-        <svg class="bike" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematic illustration of a VigorGo electric bike frame highlighting its metal construction">
-          <circle class="wheel-outer" cx="180" cy="230" r="62"/>
-          <circle class="wheel-inner" cx="180" cy="230" r="40"/>
-          <circle class="hub" cx="180" cy="230" r="6"/>
-          <circle class="wheel-outer" cx="600" cy="230" r="62"/>
-          <circle class="wheel-inner" cx="600" cy="230" r="40"/>
-          <circle class="hub" cx="600" cy="230" r="6"/>
-          <path class="frame-line" d="M180 230 L 330 140 L 460 140 L 600 230"/>
-          <path class="frame-line" d="M330 140 L 300 230 L 180 230"/>
-          <path class="metal-highlight" d="M330 140 L 460 140"/>
-          <path class="frame-line" d="M460 140 L 500 90 L 520 90"/>
-          <path class="frame-line" d="M300 230 L 380 230 L 420 200 L 460 140"/>
-          <path class="frame-line" d="M330 140 L 315 95"/>
-          <path class="frame-line" d="M295 92 L 340 92"/>
-          <path class="frame-line" d="M500 90 L 500 60"/>
-          <path class="frame-line" d="M480 60 L 520 60"/>
-          <rect class="metal-highlight" x="345" y="150" width="95" height="30" rx="3"/>
-          <line class="callout-line" x1="392" y1="150" x2="392" y2="60"/>
-          <circle class="callout-dot" cx="392" cy="150" r="3.5"/>
-          <text class="callout-text" x="360" y="48"><tspan class="hi">85% metal</tspan> frame &amp; body</text>
-          <line class="callout-line" x1="180" y1="230" x2="120" y2="290"/>
-          <circle class="callout-dot" cx="180" cy="230" r="3.5"/>
-          <text class="callout-text" x="30" y="305">Reinforced <tspan class="hi">motor hub</tspan></text>
-          <line class="callout-line" x1="600" y1="230" x2="660" y2="290"/>
-          <circle class="callout-dot" cx="600" cy="230" r="3.5"/>
-          <text class="callout-text" x="605" y="305"><tspan class="hi">Repair-friendly</tspan> build</text>
-        </svg>
+        <div class="bp-label"><span>Fig. 01 — CAD Design Preview</span><span>~85% Metal</span></div>
+        <video class="bike-video" autoplay muted loop playsinline preload="metadata" poster="assets/vigorgo-cad-poster.jpg" aria-label="CAD design animation of the VigorGo electric bike showing its metal construction">
+          <source src="assets/vigorgo-cad.webm" type="video/webm">
+          <source src="assets/vigorgo-cad.mp4" type="video/mp4">
+        </video>
         <div class="scanband"></div>
+        <div class="callout-overlay">
+          <div class="co co-1"><span class="co-dot"></span><span class="co-text"><b>85% metal</b> frame &amp; body</span></div>
+          <div class="co co-2"><span class="co-dot"></span><span class="co-text">Reinforced <b>motor hub</b></span></div>
+          <div class="co co-3"><span class="co-dot"></span><span class="co-text"><b>Repair-friendly</b> build</span></div>
+        </div>
       </div>
     </div>
   </section>
