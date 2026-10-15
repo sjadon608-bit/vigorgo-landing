@@ -408,6 +408,16 @@
   .social-row svg{ width:18px; height:18px; fill:currentColor; }
   footer .copy{ font-family:'JetBrains Mono', monospace; font-size:11.5px; color:var(--steel); letter-spacing:0.05em; }
 
+  .footer-links{
+    display:flex; justify-content:center; flex-wrap:wrap; gap:10px 22px;
+    margin:0 0 22px; font-family:'JetBrains Mono', monospace;
+    font-size:11px; color:var(--steel); letter-spacing:0.05em; text-transform:uppercase;
+  }
+  .footer-links a{ transition:color .2s ease; }
+  .footer-links a:hover{ color:var(--signal-bright); }
+  .footer-links a:focus-visible{ outline:2px solid var(--signal-bright); outline-offset:4px; }
+
+
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
   }
